@@ -3,47 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
 
-  <!-- Rating state start -->
+  <main>
 
-  How did we do?
+    <!-- Rating state start -->
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+    <div class="card" id="rating-state">
 
-  1 2 3 4 5
+      <img id="star-icon" src="./images/icon-star.svg" alt="Icon of a star">
 
-  Submit
+      <h1>How did we do?</h1>
 
-  <!-- Rating state end -->
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
 
-  <!-- Thank you state start -->
+      <form action="">
 
-  You selected <!-- Add rating here --> out of 5
+        <div class="radio">
+          <input type="radio" id="1" name="rating" value="1" class="hidden-radio">
+          <label for="1" class="radio-label">1</label><br>
 
-  Thank you!
+          <input type="radio" id="2" name="rating" value="2" class="hidden-radio">
+          <label for="2" class="radio-label">2</label><br>
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+          <input type="radio" id="3" name="rating" value="3" class="hidden-radio">
+          <label for="3" class="radio-label">3</label><br>
 
-  <!-- Thank you state end -->
+          <input type="radio" id="4" name="rating" value="4" class="hidden-radio">
+          <label for="4" class="radio-label">4</label><br>
+
+          <input type="radio" id="5" name="rating" value="5" class="hidden-radio">
+          <label for="5" class="radio-label">5</label><br>
+        </div>
+
+        <input type="submit" value="Submit" id="submit-btn">
+
+      </form>
+
+    </div>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+
+    <div class="card" id="thank-you-state">
+      <img src="./images/illustration-thank-you.svg" alt="Illustration of a phone with a coin and a card floating around it.">
+      <p class="given-rating">You selected <span id="obtained-rating"></span> out of 5</p>
+
+      <h1>Thank you!</h1>
+
+      <p class="description">We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+
+    </div>
+  
+
+    <!-- Thank you state end -->
+  
+  </main>
 
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/FazleLabib">Fazle Labib</a>.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

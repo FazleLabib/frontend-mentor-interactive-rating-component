@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+    --orange: hsl(25, 97%, 53%);
+
+    /* ### Neutral */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    color: var(--white);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+p {
+    font-weight: 400;
+    color: var(--medium-grey);
+    padding: 1rem 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue);
+}
+
+.card {
+    max-width: 20em;
+    background: radial-gradient(98.96% 98.96% at 50% 0, #232a34 0, #181e27 100%); 
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+#rating-state {
+    display: block;
+}
+
+#star-icon {
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+    padding: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.radio {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 2rem 0;
+}
+
+
+.hidden-radio {
+    position: absolute;
+    left: -9999px;
+}
+  
+
+.radio-label {
+    color: var(--medium-grey);
+    font-weight: 700;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--dark-blue);
+    cursor: pointer;
+    user-select: none;
+}
+  
+
+.radio-label:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    transition: 0.2s ease-in;
+}
+  
+
+input[type="radio"]:checked + .radio-label {
+    background-color: var(--medium-grey);
+    color: var(--white);
+    transition: 0.2s ease-in;
+}
+
+input[type="submit"] {
+    width: 100%;
+    border-radius: 2rem;
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    transition: .2s ease-in;
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.shake {
+    background-color: var(--orange);
+    animation: shake 0.5s;
+}
+  
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+#thank-you-state {
+    justify-content: center;
+    text-align: center;
+    display: none;
+}
+
+.given-rating {
+    margin: 1.5rem 4rem;
+    padding: 0.35rem;
+    color: var(--orange);
+    opacity: 0.85;
+    background-color: var(--dark-blue);
+    border-radius: 2rem;
+}
+
+#obtained-rating {
+    color: var(--orange);
+}
+
+#thank-you-state p {
+    font-size: 1rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: var(--orange); 
+}
